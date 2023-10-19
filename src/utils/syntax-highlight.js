@@ -23,6 +23,7 @@ const Languages = {
   css: [],
   diff: ['patch'],
   http: ['https'],
+  kotlin: ['kt'],
   java: ['jsp'],
   javascript: ['js', 'jsx', 'mjs', 'cjs'],
   json: [],
