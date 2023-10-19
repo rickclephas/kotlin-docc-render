@@ -1,4 +1,10 @@
-# Swift-DocC-Render
+# Kotlin-DocC-Render
+
+> [!NOTE]
+> This fork of [Swift-DocC-Render](https://github.com/apple/swift-docc-render) adds Kotlin support
+> and is used by [Kotlin-DocC](https://github.com/rickclephas/kotlin-docc).
+
+---
 
 Swift-DocC-Render is a web Single Page Application (SPA) powered by [Vue.js](https://vuejs.org/) for creating rich code documentation websites. Pages and content are generated using render JSON data from DocC. It comes with a well suited design for documentation websites.
 SPAs are web apps that render dynamically at runtime entirely in the browser, using JavaScript.
