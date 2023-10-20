@@ -58,7 +58,7 @@ def check_call(cmd, cwd=None, env=os.environ, verbose=False):
 def check_output(cmd, cwd=None, env=os.environ, verbose=False):
     if verbose:
         print(" ".join([escapeCmdArg(arg) for arg in cmd]))
-    return subprocess.check_output(cmd, cwd=cwd, env=env, stderr=subprocess.STDOUT)
+    return subprocess.check_output(cmd, cwd=cwd, env=env, stderr=subprocess.STDOUT, text=True)
 
 
 # -----------------------------------------------------------------------------
