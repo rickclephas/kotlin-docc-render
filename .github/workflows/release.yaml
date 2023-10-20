@@ -1,0 +1,23 @@
+name: Publish a release
+on:
+  push:
+    tags:
+      - 'v[0-9]+.[0-9]+.[0-9]+'
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version-file: .nvmrc
+      - name: Build
+        run: ./build-script-helper.py build
+      - name: Create ZIP
+        working-directory: ./dist
+        run: zip -r ../kotlin-docc-render.zip ./
+      - name: Create release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: kotlin-docc-render.zip
