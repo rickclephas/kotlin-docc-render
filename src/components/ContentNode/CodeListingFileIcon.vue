@@ -13,6 +13,10 @@
     v-if="fileType === 'swift'"
     class="file-icon"
   />
+  <KotlinFileIcon
+    v-else-if="fileType === 'kotlin' || fileType === 'kt' || fileType === 'kts'"
+    class="file-icon"
+  />
   <GenericFileIcon
     v-else
     class="file-icon"
@@ -21,12 +25,14 @@
 
 <script>
 import SwiftFileIcon from 'theme/components/Icons/SwiftFileIcon.vue';
+import KotlinFileIcon from 'theme/components/Icons/KotlinFileIcon.vue';
 import GenericFileIcon from 'theme/components/Icons/GenericFileIcon.vue';
 
 export default {
   name: 'CodeListingFileIcon',
   components: {
     SwiftFileIcon,
+    KotlinFileIcon,
     GenericFileIcon,
   },
   props: {
